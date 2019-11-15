@@ -1,0 +1,27 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29509.3
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "PLC_PROD", "PLC_PROD\PLC_PROD.sqlproj", "{421AFF66-2E43-4ABE-ADB0-BE4169DB2E47}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{421AFF66-2E43-4ABE-ADB0-BE4169DB2E47}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{421AFF66-2E43-4ABE-ADB0-BE4169DB2E47}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{421AFF66-2E43-4ABE-ADB0-BE4169DB2E47}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{421AFF66-2E43-4ABE-ADB0-BE4169DB2E47}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{421AFF66-2E43-4ABE-ADB0-BE4169DB2E47}.Release|Any CPU.Build.0 = Release|Any CPU
+		{421AFF66-2E43-4ABE-ADB0-BE4169DB2E47}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FD95E4F0-70A0-433C-99CF-1D74E4CC198C}
+	EndGlobalSection
+EndGlobal
