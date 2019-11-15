@@ -7,4 +7,4 @@
 
 GO
 
-CREATE UNIQUE INDEX [IX_USI_PartNumber_ProductionLine_partNumberId_productionLineId] ON [dbo].[USI_PartNumber_ProductionLine] ([partNumberId], [productionLineId])
+CREATE UNIQUE INDEX [IX_PartNumber_ProductionLine_partNumberId_productionLineId] ON [dbo].[USI_PartNumber_ProductionLine] ([partNumberId], [productionLineId])

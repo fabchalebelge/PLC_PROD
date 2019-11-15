@@ -63,8 +63,9 @@
     <Build Include="USI_PartName.sql" />
     <Build Include="USI_PartNumber.sql" />
     <Build Include="USI_PartNumber_ProductionLine.sql" />
-  </ItemGroup>
-  <ItemGroup>
-    <RefactorLog Include="PLC_PROD.refactorlog" />
+    <Build Include="USI_WorkOrder.sql" />
+    <Build Include="USI_Characteristic.sql" />
+    <Build Include="USI_Part.sql" />
+    <Build Include="USI_Measurement.sql" />
   </ItemGroup>
 </Project>
