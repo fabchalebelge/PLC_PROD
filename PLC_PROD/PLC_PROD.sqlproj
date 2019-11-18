@@ -67,5 +67,6 @@
     <Build Include="USI_Characteristic.sql" />
     <Build Include="USI_Part.sql" />
     <Build Include="USI_Measurement.sql" />
+    <Build Include="USI_sp_GetWorkOrderInfo.sql" />
   </ItemGroup>
 </Project>
