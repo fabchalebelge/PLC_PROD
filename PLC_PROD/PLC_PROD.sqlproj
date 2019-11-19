@@ -70,5 +70,6 @@
     <Build Include="USI_sp_GetWorkOrderInfo.sql" />
     <Build Include="USI_sp_GetPartId.sql" />
     <Build Include="USI_sp_SetMeasurement.sql" />
+    <Build Include="USI_sp_SetPartStatus.sql" />
   </ItemGroup>
 </Project>
