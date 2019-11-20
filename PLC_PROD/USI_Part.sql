@@ -30,8 +30,8 @@ CREATE TRIGGER [dbo].[Trigger_Part]
 
 		SELECT
 			@numOfParts		= COUNT([id]),
-			@numOfPartsOk	= SUM([valid]),
-			@numOfPartsNok	= COUNT([valid]) - SUM([valid])
+			@numOfPartsOk	= SUM(CAST([valid] AS tinyint)),
+			@numOfPartsNok	= COUNT([valid]) - SUM(CAST([valid] AS tinyint))
 		FROM
 			[USI_Part]
 		WHERE

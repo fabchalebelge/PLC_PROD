@@ -68,7 +68,4 @@
     <Build Include="USI_Part.sql" />
     <Build Include="USI_Measurement.sql" />
   </ItemGroup>
-  <ItemGroup>
-    <RefactorLog Include="PLC_PROD.refactorlog" />
-  </ItemGroup>
 </Project>
