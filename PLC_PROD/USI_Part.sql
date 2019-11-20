@@ -24,7 +24,7 @@ CREATE TRIGGER [dbo].[Trigger_Part]
 			@timeStampStop datetime,
 			@completed bit;
 
-		SET @workOrderId	= COALESCE((SELECT [workOrderId] FROM [inserted]), (SELECT [workOrderId] FROM [inserted]));
+		SET @workOrderId	= COALESCE((SELECT [workOrderId] FROM [inserted]), (SELECT [workOrderId] FROM [deleted]));
 
 		SET @timeStampStop	= GETDATE();
 
