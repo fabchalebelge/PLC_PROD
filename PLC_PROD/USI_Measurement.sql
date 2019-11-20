@@ -6,6 +6,6 @@
     [timeStamp] DATETIME NULL DEFAULT GetDate(), 
     [value] DECIMAL(7, 4) NOT NULL, 
     [valid] BIT NOT NULL, 
-    CONSTRAINT [FK_Measurement_Part] FOREIGN KEY ([partId]) REFERENCES [USI_Part]([id]), 
+    CONSTRAINT [FK_Measurement_Part] FOREIGN KEY ([partId]) REFERENCES [USI_Part]([id]) ON DELETE CASCADE, 
     CONSTRAINT [FK_Measurement_Characteristic] FOREIGN KEY ([characteristicId]) REFERENCES [USI_Characteristic]([id])
 )
