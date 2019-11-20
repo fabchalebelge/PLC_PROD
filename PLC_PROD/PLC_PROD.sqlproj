@@ -72,6 +72,7 @@
     <Build Include="USI_sp_SetMeasurement.sql" />
     <Build Include="USI_sp_SetPartStatus.sql" />
     <Build Include="USI_ReturnMessage.sql" />
+    <Build Include="USI_View_ListOfCharacteristics.sql" />
   </ItemGroup>
   <ItemGroup>
     <RefactorLog Include="PLC_PROD.refactorlog" />
