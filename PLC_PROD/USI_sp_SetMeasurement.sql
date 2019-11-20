@@ -7,6 +7,8 @@ AS
 	SET NOCOUNT ON;
 
 	DECLARE
+		@returnValue smallint,
+		@returnMessage varchar(MAX),
 		@characteristicId int;
 
 	SET @characteristicId = 
@@ -22,12 +24,25 @@ AS
 		)
 	
 	IF @characteristicId IS NULL
-		RETURN -1
+		GOTO ErrorHandler;
 	ELSE
 		BEGIN
 			INSERT INTO [USI_Measurement]	([partId]	,[characteristicId]	,[value]	,[valid])
 							VALUES			(@partId	,@characteristicId	,@value		,@valid	)
 
-			RETURN 0;
+			SET @returnValue = 0;
+			GOTO OutputRecordSet;
 		END
 
+
+	ErrorHandler:
+		IF NOT EXISTS(SELECT * FROM [USI_Part] WHERE [id] = @partId)	SET @returnValue = -120;	--partId inexistant
+		ELSE IF @characteristicId IS NULL								SET @returnValue = -121;	--Caractéristique inexistante
+		SET @returnMessage = (SELECT [returnMessage] FROM [USI_ReturnMessage] WHERE [returnValue] = @returnValue);
+		GOTO OutputRecordSet;
+
+
+	OutputRecordSet:
+		SELECT
+			@returnValue AS [returnValue],
+			@returnMessage AS [returnMessage];
