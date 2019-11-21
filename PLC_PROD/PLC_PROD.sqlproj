@@ -77,4 +77,7 @@
   <ItemGroup>
     <RefactorLog Include="PLC_PROD.refactorlog" />
   </ItemGroup>
+  <ItemGroup>
+    <PostDeploy Include="USI_script_DefaultValues.sql" />
+  </ItemGroup>
 </Project>
