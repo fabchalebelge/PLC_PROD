@@ -48,8 +48,5 @@ AS
 		#Measurements;
 
 	SELECT
-		@Ibar	AS [average],
-		@STDEV	AS [standardDeviation],
-		@IT		AS [toleranceInterval],
 		@Cp		AS [Cp],
 		@CpK	AS [CpK];

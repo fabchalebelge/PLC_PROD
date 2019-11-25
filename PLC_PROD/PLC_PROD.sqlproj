@@ -75,6 +75,7 @@
     <Build Include="USI_sp_GetIMRValues.sql" />
     <Build Include="USI_ReturnMessage.sql" />
     <Build Include="USI_sp_GetCpCpk.sql" />
+    <Build Include="USI_sp_GetHistogramValues.sql" />
   </ItemGroup>
   <ItemGroup>
     <PostDeploy Include="USI_script_DefaultValues.sql" />
