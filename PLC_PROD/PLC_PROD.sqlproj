@@ -71,13 +71,14 @@
     <Build Include="USI_sp_GetPartId.sql" />
     <Build Include="USI_sp_SetMeasurement.sql" />
     <Build Include="USI_sp_SetPartStatus.sql" />
-    <Build Include="USI_ReturnMessage.sql" />
     <Build Include="USI_View_ListOfCharacteristics.sql" />
-  </ItemGroup>
-  <ItemGroup>
-    <RefactorLog Include="PLC_PROD.refactorlog" />
+    <Build Include="USI_sp_GetIMRValues.sql" />
+    <Build Include="USI_ReturnMessage.sql" />
   </ItemGroup>
   <ItemGroup>
     <PostDeploy Include="USI_script_DefaultValues.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <RefactorLog Include="PLC_PROD.refactorlog" />
   </ItemGroup>
 </Project>

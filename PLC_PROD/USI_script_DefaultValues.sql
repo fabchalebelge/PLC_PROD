@@ -17,6 +17,23 @@ DECLARE
 	@partNumberId int,
 	@partNumberProductionLineId int;
 
+/*
+======================================================================================
+===================================  ReturnMessage  ==================================
+======================================================================================
+*/
+
+DELETE FROM [USI_ReturnMessage];
+
+INSERT INTO [USI_ReturnMessage] VALUES
+	(-100, 'USI_sp_GetWorkOrderId : Ligne de production inexistante'),
+	(-101, 'USI_sp_GetWorkOrderId : Part Number inexistant'),
+	(-102, 'USI_sp_GetWorkOrderId : Lien inexistant entre le part number et la ligne de production'),
+	(-103, 'USI_sp_GetWorkOrderId : OF existant sur une autre ligne de production ou un autre part number'),
+	(-110, 'USI_sp_GetPartId : workOrderId inexisatnt'),
+	(-120, 'USI_sp_SetMeasurement : partId inexistant'),
+	(-121, 'USI_sp_SetMeasurement : caractéristique inexistante'),
+	(-130, 'USI_sp_SetPartStatus : partId inexistant');
 
 
 /*
