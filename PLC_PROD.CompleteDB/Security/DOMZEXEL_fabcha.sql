@@ -1,0 +1,2 @@
+﻿CREATE USER [DOMZEXEL\fabcha] FOR LOGIN [DOMZEXEL\fabcha];
+
