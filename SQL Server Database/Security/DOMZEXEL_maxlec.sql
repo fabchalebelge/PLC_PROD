@@ -1,0 +1,2 @@
+﻿CREATE USER [DOMZEXEL\maxlec] FOR LOGIN [DOMZEXEL\maxlec];
+

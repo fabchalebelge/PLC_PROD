@@ -1,0 +1,2 @@
+﻿CREATE USER [DOMZEXEL\Herfot] FOR LOGIN [DOMZEXEL\Herfot];
+

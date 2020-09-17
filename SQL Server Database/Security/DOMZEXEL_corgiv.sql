@@ -1,0 +1,2 @@
+﻿CREATE USER [DOMZEXEL\corgiv] FOR LOGIN [DOMZEXEL\corgiv];
+

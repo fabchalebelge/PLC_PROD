@@ -1,0 +1,2 @@
+﻿CREATE USER [DOMZEXEL\clepet] FOR LOGIN [DOMZEXEL\clepet];
+

@@ -1,0 +1,149 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <Name>SQL_Server_Database</Name>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>4.1</ProjectVersion>
+    <ProjectGuid>{3f5232c3-6ca4-4021-97c4-aa2217ddbd52}</ProjectGuid>
+    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql130DatabaseSchemaProvider</DSP>
+    <OutputType>Database</OutputType>
+    <RootPath>
+    </RootPath>
+    <RootNamespace>SQL_Server_Database</RootNamespace>
+    <AssemblyName>SQL_Server_Database</AssemblyName>
+    <ModelCollation>1036,CI</ModelCollation>
+    <DefaultFileStructure>BySchemaAndSchemaType</DefaultFileStructure>
+    <DeployToDatabase>True</DeployToDatabase>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetLanguage>CS</TargetLanguage>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <SqlServerVerification>False</SqlServerVerification>
+    <IncludeCompositeObjects>True</IncludeCompositeObjects>
+    <TargetDatabaseSet>True</TargetDatabaseSet>
+    <DefaultCollation>French_CI_AS</DefaultCollation>
+    <DefaultFilegroup>PRIMARY</DefaultFilegroup>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
+    <!-- Default to the v11.0 targets path if the targets file for the current VS version is not found -->
+    <SSDTExists Condition="Exists('$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets')">True</SSDTExists>
+    <VisualStudioVersion Condition="'$(SSDTExists)' == ''">11.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Condition="'$(SQLDBExtensionsRefPath)' != ''" Project="$(SQLDBExtensionsRefPath)\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <ItemGroup>
+    <Folder Include="Properties" />
+    <Folder Include="dbo\" />
+    <Folder Include="dbo\Tables\" />
+    <Folder Include="dbo\Views\" />
+    <Folder Include="Security\" />
+    <Folder Include="dbo\Stored Procedures\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="dbo\Tables\USI_ProductionLine.sql" />
+    <Build Include="dbo\Tables\QAGATE_1_ArchiveTempsCycle.sql" />
+    <Build Include="dbo\Tables\QAGATE_1_Client.sql" />
+    <Build Include="dbo\Tables\QAGATE_1_Cycle.sql" />
+    <Build Include="dbo\Tables\QAGATE_1_Email.sql" />
+    <Build Include="dbo\Tables\USI_Project.sql" />
+    <Build Include="dbo\Tables\QAGATE_1_EtatSysteme.sql" />
+    <Build Include="dbo\Tables\USI_PartName.sql" />
+    <Build Include="dbo\Tables\QAGATE_1_EventClass.sql" />
+    <Build Include="dbo\Tables\USI_PartNumber.sql" />
+    <Build Include="dbo\Tables\QAGATE_1_EventData.sql" />
+    <Build Include="dbo\Tables\USI_PartNumber_ProductionLine.sql" />
+    <Build Include="dbo\Tables\QAGATE_1_EventInfo.sql" />
+    <Build Include="dbo\Tables\QAGATE_1_MainTable.sql" />
+    <Build Include="dbo\Tables\QAGATE_1_NombrePiece.sql" />
+    <Build Include="dbo\Tables\QAGATE_1_PasswordData.sql" />
+    <Build Include="dbo\Tables\QAGATE_1_Reference.sql" />
+    <Build Include="dbo\Tables\USI_ReturnMessage.sql" />
+    <Build Include="dbo\Tables\QAGATE_1_KeyenceData.sql" />
+    <Build Include="dbo\Tables\USI_Characteristic.sql" />
+    <Build Include="dbo\Tables\USI_Measurement.sql" />
+    <Build Include="dbo\Tables\USI_Part.sql" />
+    <Build Include="dbo\Tables\USI_WorkOrder.sql" />
+    <Build Include="dbo\Views\USI_View_ListOfCharacteristics.sql" />
+    <Build Include="dbo\Views\QAGATE_1_ViewCycleUE21.sql">
+      <AnsiNulls>Off</AnsiNulls>
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Views\QAGATE_1_ViewCycleUE24.sql">
+      <AnsiNulls>Off</AnsiNulls>
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="Security\DOMZEXEL_Patmai.sql" />
+    <Build Include="Security\DOMZEXEL_fabcha.sql" />
+    <Build Include="Security\DOMZEXEL_chamin.sql" />
+    <Build Include="Security\usinage.sql" />
+    <Build Include="Security\quagate.sql" />
+    <Build Include="Security\DOMZEXEL_corgiv.sql" />
+    <Build Include="Security\DOMZEXEL_emeriv.sql" />
+    <Build Include="Security\DOMZEXEL_clepet.sql" />
+    <Build Include="Security\DOMZEXEL_Herfot.sql" />
+    <Build Include="Security\DOMZEXEL_laudec.sql" />
+    <Build Include="Security\DOMZEXEL_maxlel.sql" />
+    <Build Include="Security\DOMZEXEL_maxlec.sql" />
+    <Build Include="Security\RoleMemberships.sql" />
+    <Build Include="dbo\Stored Procedures\QAGATE_1_OF.sql" />
+    <Build Include="dbo\Stored Procedures\USI_sp_GetPartId.sql" />
+    <Build Include="dbo\Stored Procedures\USI_sp_SetMeasurement.sql" />
+    <Build Include="dbo\Stored Procedures\USI_sp_SetPartStatus.sql" />
+    <Build Include="dbo\Stored Procedures\USI_sp_GetWorkOrderId.sql" />
+    <Build Include="dbo\Stored Procedures\QAGATE_1_Avancement.sql" />
+    <Build Include="dbo\Stored Procedures\USI_sp_GetCpCpk.sql" />
+    <Build Include="dbo\Stored Procedures\QAGATE_1_Bekido_Jour.sql" />
+    <Build Include="dbo\Stored Procedures\USI_sp_GetHistogramValues.sql" />
+    <Build Include="dbo\Stored Procedures\QAGATE_1_Bekido_OF.sql" />
+    <Build Include="dbo\Stored Procedures\USI_sp_GetIMRValues.sql" />
+    <Build Include="dbo\Stored Procedures\QAGATE_1_Bekido_Team.sql" />
+    <Build Include="dbo\Stored Procedures\QAGATE_1_OFDate.sql">
+      <AnsiNulls>Off</AnsiNulls>
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\Stored Procedures\QAGATE_1_Chart_Keyence_Jour.sql" />
+    <Build Include="dbo\Stored Procedures\QAGATE_1_Chart_Keyence_OF.sql" />
+    <Build Include="dbo\Stored Procedures\QAGATE_1_Chokko_Jour.sql" />
+    <Build Include="dbo\Stored Procedures\QAGATE_1_CycleMoyen.sql" />
+    <Build Include="dbo\Stored Procedures\QAGATE_1_Chokko_OF.sql" />
+    <Build Include="dbo\Stored Procedures\QAGATE_1_ExtractionQG.sql" />
+    <Build Include="dbo\Stored Procedures\QAGATE_1_Chokko_Team.sql" />
+    <Build Include="dbo\Stored Procedures\QAGATE_1_PredictionFinOF.sql" />
+    <Build Include="dbo\Stored Procedures\QAGATE_1_Event_Count_Jour.sql" />
+    <Build Include="dbo\Stored Procedures\QAGATE_1_ExtractionQGEvent.sql" />
+    <Build Include="dbo\Stored Procedures\QAGATE_1_Event_Count_OF.sql" />
+    <Build Include="dbo\Stored Procedures\QAGATE_1_Event_Jour.sql" />
+    <Build Include="dbo\Stored Procedures\QAGATE_1_Event_OF.sql" />
+    <Build Include="dbo\Stored Procedures\QAGATE_1_Prevision_Jour.sql" />
+    <Build Include="dbo\Stored Procedures\QAGATE_1_Prevision_OF.sql" />
+    <Build Include="dbo\Stored Procedures\QAGATE_1_Prevision_Team.sql" />
+    <Build Include="dbo\Stored Procedures\QAGATE_1_Rebut_Jour.sql" />
+    <Build Include="dbo\Stored Procedures\QAGATE_1_Rebut_OF.sql" />
+    <Build Include="dbo\Stored Procedures\QAGATE_1_Rebut_Team.sql" />
+  </ItemGroup>
+</Project>

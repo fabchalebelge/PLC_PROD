@@ -1,0 +1,2 @@
+﻿CREATE USER [DOMZEXEL\emeriv] FOR LOGIN [DOMZEXEL\emeriv];
+
